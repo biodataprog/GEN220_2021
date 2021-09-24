@@ -25,7 +25,8 @@ git clone https://github.com/biodataprog/GEN220_data.git
 * [UNIX command reference 2](UNIX/img/FOSS_CheatSheet.jpg)
 * [Shell Scripting Tutorial](https://www.shellscript.sh/)
 * [Intro to Command-Line from HPCC](http://hpcc.ucr.edu/manuals_linux-basics_cmdline-basics.html)
-Major Topic Areas
+
+# Major Topic Areas
 * [UNIX](UNIX) Shell scripting and using [HPCC](http://hpcc.ucr.edu)
 * [Python](Python) Programming
 * [Bioinformatics](Bioinfomatics) analysis methods
@@ -36,6 +37,8 @@ Major Topic Areas
 * HW1 - [Homework 1](Assignments/HW1) [PDF](Assignments/HW1.pdf)
 * HW2 - [Homework 2](Assignments/HW2) [PDF](Assignments/HW2.pdf)
 * HW3 - [Homework 3](Assignments/HW3) [PDF](Assignments/HW3.pdf)
+* HW4 - [Homework 4](Assignments/HW4) [PDF](Assignments/HW4.pdf)
+* HW5 - [Homework 5](Assignments/HW5) [PDF](Assignments/HW5.pdf)
 
 # Project
 
