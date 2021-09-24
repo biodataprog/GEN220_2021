@@ -27,7 +27,7 @@ Time and location: W/F 3:00-4:30PM Zoom-land
 
 Office Hours:
 
-[https://biodataprog.github.io/GEN220_2020/](https://biodataprog.github.io/GEN220_2020/)
+[https://biodataprog.github.io/GEN220_2021/](https://biodataprog.github.io/GEN220_2021/)
 
 Prerequisites
 -------------

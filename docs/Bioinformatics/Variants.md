@@ -32,13 +32,13 @@ bcftools filter -O z -o $VCFFILTER -s LOWQUAL -i'%QUAL>10' $VCF
 
 ## Advanced - GATK variant calling
 
-An existing framework that works can be checked out from [https://github.com/biodataprog/GEN220_2020_examples](https://github.com/biodataprog/GEN220_2020_examples) see the Variants.
+An existing framework that works can be checked out from [https://github.com/biodataprog/GEN220_2021_examples](https://github.com/biodataprog/GEN220_2021_examples) see the Variants.
 
 Make sure you are running this in ~/bigdata or somewhere with enough space as this will generate large files.
 
 The first script `pipeline_GATK/00_index.sh` will download the genome, index and download the fastq files from NCBI SRA. If you had different datasets you would develop your own data files and script.
 
-you don't need to copy this code - do the git checkout (eg `cd ~/bigdata; git clone https://github.com/biodataprog/GEN220_2020_examples; cd Variants`) and then you can run these steps.
+you don't need to copy this code - do the git checkout (eg `cd ~/bigdata; git clone https://github.com/biodataprog/GEN220_2021_examples; cd Variants`) and then you can run these steps.
 
 This has a configuration file which defines some variables used by the pipeline.
 
