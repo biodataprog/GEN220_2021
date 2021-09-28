@@ -6,12 +6,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Syllabus</title>
   <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -24,7 +156,7 @@
 <p>With the advancement of high throughput data generation methods, a major challenge that graduate students in life sciences have to face today is to analyze large amount of biological data. The objective of this course is to provide an opportunity for graduate students with no computer science background to learn the basic skills of handling high throughput biological data. It covers the Linux/Unix environment and the importance of the com1mand line interface; the Python programming language; program design, implementation, and testing; BioPython; Strategies for analyzing genome resequencing, RNASeq, sequencing data. Students build hands-on skills by analyzing real high throughput biological data through homework assignments and team projects.</p>
 <p>Units: 3</p>
 <p>Instructor: Jason Stajich (jason.stajich@ucr.edu)</p>
-<p>Time and location: W 4:00-4:50PM, F 3:00-4:50PM, Zoom-land</p>
+<p>Time and location: W/F 3:00-4:30PM Zoom-land</p>
 <p>Office Hours:</p>
 <p><a href="https://biodataprog.github.io/GEN220_2021/">https://biodataprog.github.io/GEN220_2021/</a></p>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -34,24 +166,40 @@
 <h2 id="resources">Resources</h2>
 <p>None of these texts are required for completion of the course but they will provide a great deal of helpful background and examples that will improve your ability to master UNIX or Programming in Python.</p>
 <ol type="1">
-<li><p><em>Bioinformatics Data Skills: Reproducible and Robust Research with Open Source Tools</em>. Vince Buffalo. 2015 O’Reilly &amp; Associates. Available from <a href="http://shop.oreilly.com/product/0636920030157.do">O’Reilly and Associates</a>, <a href="http://amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372">Amazon</a> Free to read on UCR network (or use VPN) - <a href="http://uclibs.org/PID/277903">Safari link</a>.</p></li>
+<li><p><em>Bioinformatics Data Skills: Reproducible and Robust Research with Open Source Tools</em>. Vince Buffalo. 2015 O’Reilly &amp; Associates. Available from <a href="http://shop.oreilly.com/product/0636920030157.do">O’Reilly and Associates</a>, <a href="http://amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372">Amazon</a> Free to read on UCR network (or use VPN) - <a href="https://www.oreilly.com/library/view/bioinformatics-data-skills/9781449367480/">Safari link</a>.</p></li>
 <li><p><em>Unix and Perl to the Rescue: A Primer</em>. Keith Bradnam and Ian Korf. <a href="http://korflab.ucdavis.edu/unix_and_Perl/">Unix and Perl Primer for Biologists</a></p></li>
 <li><p><em>Unix and Perl to the rescue!</em> Bradnam and Korf. <a href="https://www.amazon.com/gp/product/0521169828?tag=keithbradnamc-20">Amazon</a></p></li>
 <li><p><a href="http://rosalind.info/problems/locations/">Rosalind</a> - An online platform to learn bioinformatics and programming in Python.</p></li>
 <li><p>Software Carpentry - <a href="https://software-carpentry.org/">https://software-carpentry.org/</a> and Data Carpentry - <a href="http://www.datacarpentry.org/">http://www.datacarpentry.org/</a>.</p></li>
 <li><p>Berk Ekmekci, Charles E. McAnany, Cameron Mura. An Introduction to Programming for Bioscientists: A Python-Based Primer. PLoS Comp Bio. DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004867">10.1371/journal.pcbi.1004867</a></p></li>
 <li><p>Ken Youens-Clark. Tiny Python Projects. <a href="https://www.manning.com/books/tiny-python-projects">https://www.manning.com/books/tiny-python-projects</a></p></li>
+<li><p>Pat Schloss’s Riffomonas Code Club has great <a href="https://riffomonas.org/code_club/">videos and links</a> to programming and microbiome analyses.</p></li>
 </ol>
 <h2 id="grading">Grading</h2>
 <ul>
-<li>Programming Homework assignments (4 in total): 50% of grade</li>
+<li>Programming Homework assignments (5 in total): 50% of grade</li>
 <li>Project: 50% of grade</li>
 </ul>
 <h2 id="homework">Homework</h2>
 <ul>
 <li><p>Homework is due before class on the date listed in the syllabus or if amended when assignment is given.</p></li>
 <li><p>There will be a programming assignment every two weeks during the first half of the course. Programming assignments must be prepared along with any necessary input files or documentation to demonstrate program usage.</p></li>
-<li><p>Code should be runnable as turned in. You will deposit your code in your github repository or if not possible, by iLearn. You can make one private personal repository to deposit and should organize a folder for each homework assignment (e.g. hw1, hw2, hw3, hw4).</p></li>
+<li><p>Code should be runnable as turned in. You will deposit your code in your github repository or if not possible, by Canvas. You can make one private personal repository to deposit and should organize a folder for each homework assignment (e.g. hw1, hw2, hw3, hw4). There will be a link to create these through GitHub Classroom and posted in <a href="https://elearn.ucr.edu/courses/17733/assignments/syllabus">Canvas</a> and Piazza.</p>
+<h2 id="technology-requirements">Technology Requirements</h2>
+<p>Because this course takes place online and requires use of a computer, you will need the following:</p>
+<h2 id="hardware">Hardware</h2>
+<p>Access to a current Mac or PC (with a fast processor and speakers) Webcam and microphone (to participate in any video components, e.g. live sessions, remote proctoring, video presentations) Software</p></li>
+</ul>
+<h2 id="operating-systems">Operating systems:</h2>
+<ul>
+<li>OSX is recommended with <a href="https://www.xquartz.org/">Xquartz</a> installed for X11</li>
+<li>UNIX or Linux eg <a href="https://ubuntu.com/">Ubuntu</a></li>
+<li>Windows with <a href="https://mobaxterm.mobatek.net/">MobaXterm</a></li>
+</ul>
+<h2 id="other-recommended-software---a-local-text-editor">Other recommended software - a local text editor</h2>
+<ul>
+<li><a href="https://atom.io/">Atom</a> is highly recommended</li>
+<li><a href="https://notepad-plus-plus.org/downloads/">Notepad++</a></li>
 </ul>
 <h2 id="projects">Projects</h2>
 <ul>
@@ -79,129 +227,147 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Oct-2</td>
+<td style="text-align: left;">Sept-24</td>
 <td style="text-align: left;">F</td>
 <td style="text-align: left;">Course Intro / UNIX I: Cmdline, GitHub</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Oct-7</td>
+<td style="text-align: left;">Sept-29</td>
 <td style="text-align: left;">W</td>
 <td style="text-align: left;">UNIX II: Biocluster HPCC, Running programs</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Oct-9</td>
+<td style="text-align: left;">Oct-1</td>
 <td style="text-align: left;">F</td>
 <td style="text-align: left;">UNIX III: Tools for data processing</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Homework 1 Due</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Oct-14</td>
+<td style="text-align: left;">Oct-6</td>
 <td style="text-align: left;">W</td>
 <td style="text-align: left;">UNIX IV: Advanced UNIX and data processing</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Oct-16</td>
+<td style="text-align: left;">Oct-8</td>
 <td style="text-align: left;">F</td>
-<td style="text-align: left;">Python 1 - Variables, running, cmdline, strings, math</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Python I - Variables, running, cmdline, strings, math</td>
+<td style="text-align: left;">Homework 2 Due</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Oct-21</td>
+<td style="text-align: left;">Oct-13</td>
 <td style="text-align: left;">W</td>
-<td style="text-align: left;">Python 2 - Logic, loops, lists, iterator; I/O reading/writing files</td>
+<td style="text-align: left;">Python II - Logic, loops, lists, iterator; I/O reading/writing files</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Oct-23</td>
+<td style="text-align: left;">Oct-15</td>
 <td style="text-align: left;">F</td>
-<td style="text-align: left;">Python 3 - Dictionaries, Arrays, functions</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Python III - Dictionaries, Arrays, functions</td>
+<td style="text-align: left;">Homework 3 Due</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Oct-28</td>
+<td style="text-align: left;">Oct-20</td>
 <td style="text-align: left;">W</td>
-<td style="text-align: left;"><strong>NO IN CLASS LECTURE</strong> - Structured data (CSV, XML, GFF, BED)</td>
+<td style="text-align: left;">Python IV - Structured data parsing (GFF, CSV, BED)</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Oct-30</td>
+<td style="text-align: left;">Oct-22</td>
 <td style="text-align: left;">F</td>
-<td style="text-align: left;">Python 5 - BioPython, Pandas</td>
+<td style="text-align: left;">Python V - BioPython, Pandas</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Nov-4</td>
+<td style="text-align: left;">Oct-27</td>
 <td style="text-align: left;">W</td>
-<td style="text-align: left;">Python Review concepts</td>
+<td style="text-align: left;">(No Live lecture class - recorded Video to be posted TBD)</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Nov-6</td>
+<td style="text-align: left;">Oct-29</td>
 <td style="text-align: left;">F</td>
 <td style="text-align: left;">Alignment and Bioinformatics Algorithms; LAST, cmdline &amp; automation</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Homework 4 Due</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Nov-11</td>
+<td style="text-align: left;">Nov-3</td>
 <td style="text-align: left;">W</td>
-<td style="text-align: left;">Bioinformatics 1 - Aligning short reads, coverage, identifying variants</td>
+<td style="text-align: left;">Bioinformatics I - Aligning short reads, coverage, identifying variants</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Nov-13</td>
+<td style="text-align: left;">Nov-5</td>
 <td style="text-align: left;">F</td>
-<td style="text-align: left;">Bioinformatics 2 - RNASeq analyses</td>
+<td style="text-align: left;">Bioinformatics II - RNASeq analyses</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Nov-18</td>
+<td style="text-align: left;">Nov-10</td>
 <td style="text-align: left;">W</td>
-<td style="text-align: left;">Bioinformatics 3 - Genome Assembly</td>
+<td style="text-align: left;">Bioinformatics III - Genome Assembly</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Nov-20</td>
+<td style="text-align: left;">Nov-12</td>
 <td style="text-align: left;">F</td>
-<td style="text-align: left;">Bioinformatics 5 - Protein Sequence analyses (HMMER, InterPro, SignalP)</td>
+<td style="text-align: left;">Bioinformatics IV - Protein Sequence analyses (HMMER, InterPro, SignalP)</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Nov-25</td>
+<td style="text-align: left;">Nov-17</td>
 <td style="text-align: left;">W</td>
-<td style="text-align: left;">Data Plotting and basic R graphics</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Bioinformatics V - Orthology, Phylogenetics and automation</td>
+<td style="text-align: left;">Homework 5 Due</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><em>Nov-27</em></td>
+<td style="text-align: left;">Nov-19</td>
 <td style="text-align: left;">F</td>
-<td style="text-align: left;">** Native American Heritage Day; No Class Meeting **</td>
+<td style="text-align: left;">Databases - SQLite</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Dec-2</td>
+<td style="text-align: left;">Nov-24</td>
 <td style="text-align: left;">W</td>
-<td style="text-align: left;">Bioinformatics 6 - ChIP-Seq, ATAC-Seq, 5mC methylaion data</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Review Bioinformatics and Databases</td>
+<td style="text-align: left;">Extra Topics</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Dec-4</td>
+<td style="text-align: left;">Nov-26</td>
 <td style="text-align: left;">F</td>
-<td style="text-align: left;">Bioinformatics 7 - Phylogenentic analyses</td>
+<td style="text-align: left;"><strong>NO CLASS - Native American Heritage Day</strong></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Dec-9</td>
+<td style="text-align: left;">Dec-1</td>
 <td style="text-align: left;">W</td>
-<td style="text-align: left;"><strong>NO IN CLASS LECTURE</strong> - Material will be posted - review major topics</td>
+<td style="text-align: left;">Data visualization in R and python</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Dec-11</td>
+<td style="text-align: left;">Dec-3</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Automation and workflows</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dec-8</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Review Topics</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dec-10</td>
 <td style="text-align: left;">F</td>
 <td style="text-align: left;">Class Presentations</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dec-15</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Final Project Reports Due</td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
