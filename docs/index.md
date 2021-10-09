@@ -55,7 +55,7 @@ The course will be divided into three topic areas.
 1. [Course Intro / UNIX I: Cmdline](UNIX/00_Login_Notebook) [PDF](UNIX/00_Login_Notebook.pdf)
 1. [UNIX: Running Tools](UNIX/01_Tools) [PDF](UNIX/01_Tools.pdf)
 1. [UNIX: Analysis and Programming](UNIX/02_Analysis_summary) [PDF](UNIX/02_Analysis_summary.pdf)
-1. [UNIX: Misc Tricks](UNIX/03_Wrapup_and_Tools) [PDF](UNIX/03_Wrapup_and_Tools.pdf)
+1. [UNIX: Misc Tricks](UNIX/03_Advanced_UNIX_DataProcessing) [PDF](UNIX/03_Advanced_UNIX_DataProcessing.pdf)
 
 ## Python
 1. [Python: Intro](Python/01_Python_Intro) [PDF](Python/01_Python_Intro.pdf)
