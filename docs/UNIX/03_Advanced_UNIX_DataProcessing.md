@@ -147,7 +147,7 @@ Note that creating these same pairs on your local laptop and copying the public 
 
 Click on piazza links for homework submission:
 
-[https://piazza.com/ucr/fall2021/gen220/resources](https://piazza.com/ucr/fall2021/gen220/resources)
+[https://piazza.com/ucr/fall2021/gen220001/resources](https://piazza.com/ucr/fall2021/gen220001/resources)
 
 ![piazzahw](img/piazza_hw.png)
 
@@ -178,16 +178,16 @@ to check out to your laptop).
 See the link in this window:
 ![githubrepo](img/hw_github_repo1.png)
 
-Go to your command line (on the cluster and check out your repository.
+Go to your command line (on the cluster and check out your repository - you will be changing YOURUSERNAME to the login you use on github.
 
-`git clone git@github.com:biodataprog/2021-hw1-hyphaltip.git`
+`git clone git@github.com:biodataprog/2021-homework1-YOURUSERNAME.git`
 
 If you cannot get this to work you can revert to using https but you
 will need to enter your **Github** username and password each time you
-want to commit which is annoying.
+want to commit which is annoying.  Note the instructions on how to use the [Git access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for https connection.
 
-The equivalent would look like this
-`git clone https://github.com/biodataprog/2021-hw1-hyphaltip.git`
+The equivalent would look like this (except for the YOURNAME part)
+`git clone https://github.com/biodataprog/2021-homework1-YOURNAME.git`
 
 ## Making changes
 
@@ -224,6 +224,14 @@ $ git commit
 To Sync your code on HPCC (or your laptop) wherever you have a git repository checked out - you still need to save and push these changes to the github "cloud". You can do this by typing
 
 `git push`
+
+- you will be asked to enter a username (your git username) and your password - which is the [authentication token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) you generated before. This is effectively a new password that can be more easily thrown away, as compared to your github account password so this increases security of your account.
+so you create this token (Personal Access Token) and it is a long set of letters and numbers. your username is still your username. So when you go to `git clone`, or `git pull`, or `git push` you will need to put in your username and this token as the password.
+
+So you’ll have some notepad you can copy from ready to grab this each time, but it is kind of annoying. To overcome that you can also use the following to cache (eg save) your password in a process that is running on the cluster for a certain period of time. Default is 15 minutes but you can even set that cache time to hours or days or more (but only is valid for while you are logged into that computer I believe).
+
+This explains how you can save your username/password so you don’t have to enter the username and password each time.
+https://stackoverflow.com/questions/5343068/is-there-a-way-to-cache-https-credentials-for-pushing-commits
 
 ## To get new changes
 
