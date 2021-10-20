@@ -164,7 +164,7 @@ newdates.sort()
 print(newdates)
 
 for n in newdates:
-    print(datetime.strftime(n,"%Y-%b-%d")," OR ", 
+    print(datetime.strftime(n,"%Y-%b-%d")," OR ",
         datetime.strftime(n,"%Y-%m-%d"), " OR ",
         datetime.strftime(n,"%A, %b %d, %Y"), " OR ",
         datetime.strftime(n,"%c")
@@ -360,4 +360,3 @@ print(bases)
 ```shell
 {'A': 7, 'C': 1, 'G': 4, 'T': 1}
 ```
-

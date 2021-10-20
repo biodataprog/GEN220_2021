@@ -249,7 +249,7 @@ $ cat file | python myscript.py
 
 Inside the Python code here we print every line that is sent in.
 ```python
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys # this tells python we need to use a package called sys
 i=0
@@ -266,7 +266,7 @@ filehandle = open(myfile,"r")
 
 Here is a program that will read in each line from a file and print it back out.
 ```python
-#!/usr/bin/env python
+#!/usr/bin/env python3
 i=0
 file = "data1.dat"
 fh = open(file,"r")
@@ -295,6 +295,7 @@ options.
 Besides using print to the OUTPUT stream we can write to a file
 
 ```python
+#!/usr/bin/env python3
 ofh = open("my_data.tab","w")
 ofh.write("Species\tHabitat\tSize\n")
 ofh.write("Crab\tBeach\tM\n")
@@ -312,9 +313,9 @@ Fish    Ocean    S
 Modules are collections of code routines. We will talk more about
 functions/routines in next lecture. Can use these as tools.
 
-[sys](https://docs.python.org/3/library/sys.html) - System-specific parameters and functions
-[urllib.request](https://docs.python.org/3/library/urllib.request.html#module-urllib.request) - URLs for opening web or network connections
-[csv](https://docs.python.org/3/library/csv.html) - Comma and Tab delimited data parsing
+* [sys](https://docs.python.org/3/library/sys.html) - System-specific parameters and functions
+* [urllib.request](https://docs.python.org/3/library/urllib.request.html#module-urllib.request) - URLs for opening web or network connections
+* [csv](https://docs.python.org/3/library/csv.html) - Comma and Tab delimited data parsing
 
 ## STDIN again
 Remember we can pass data into a program via STDIN if we use the '|' "pipes" in UNIX.
@@ -343,10 +344,11 @@ for line in info:
 
 Comma delimited files can be parsed this way. The [module](https://docs.python.org/3/library/csv.html) is smart enough to handle cases where the delimiter is embedded within
 quotes.
-So for example
+So for example `test2.csv` could contain these lines. You can download [a copy](test2.csv).
 
 ```
 Colorado State University,"Fort Collins, Colorado",CSU
+University of California-Riverside,"Riverside, California",UCR
 ```
 
 ```python
@@ -356,9 +358,25 @@ with open(file2) as csvfile:
     reader = csv.reader(csvfile,delimiter=",")
     for row in reader:
         print("\t".join(row))
+
 with open("outtest.csv","w") as csvfile:
+  writer = csv.writer(csvfile,delimiter="\t")
+  writer.writerow(["Name","Flavor","Color"])
+  writer.writerow(["Apple","Sweet","Red"])
+  writer.writerow(["Pretzel","Salty","Brown"])
+
+with open("outtest2.csv","w") as csvfile:
     writer = csv.writer(csvfile,delimiter="\t")
     writer.writerow(["Name","Flavor","Color"])
-    writer.writerow(["Apple","Sweet","Red"])
+    writer.writerow(["Apple","Sweet","Red\tYellow"])
+    writer.writerow(["Pretzel","Salty","Brown"])
+```
+
+Notice how this changes when the delimiter is part of the record, csv module does this automatically.
+```python
+with open("outtest2.csv","w") as csvfile:
+    writer = csv.writer(csvfile,delimiter=",")
+    writer.writerow(["Name","Flavor","Color"])
+    writer.writerow(["Apple","Sweet","Red,Yellow"])
     writer.writerow(["Pretzel","Salty","Brown"])
 ```
