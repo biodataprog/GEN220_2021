@@ -42,7 +42,7 @@ git clone https://github.com/biodataprog/GEN220_data.git
 
 # Project
 
-* [Project Team Ideas](Assignments/Project_Ideas) [PDF/Assignments/Project_Ideas.pdf]
+* [Project Team Ideas](Assignments/Project_Ideas) [PDF](Assignments/Project_Ideas.pdf)
 * [Project Team Report Template](Assignments/Project_Report_Template) [PDF](Assignments/Project_Report_Template.pdf)
 * [Project Presentation Info](Assignments/Project_Presentation) [PDF](Assignemnts/Project_Presentation.pdf)
 * The 2019 project ideas are [here](Assignments/Project_Teams.2019) [PDF](Assignments/Project_Teams.2019.pdf)
