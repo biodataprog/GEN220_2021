@@ -2,12 +2,12 @@
 
 A powerful tool for processing columnar data is built into the pandas package.
 
-## Install 
+## Install
 
 To install on conda in the previous setup gen220 conda environment.
 
 ```bash
-source activate gen220
+source activate mygen220
 conda install pandas matplotlib
 ```
 
@@ -17,4 +17,3 @@ conda install pandas matplotlib
 import pandas as pd
 
 ```
-

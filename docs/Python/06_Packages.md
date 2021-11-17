@@ -3,9 +3,14 @@
 ## Python 3
 
 To use Python 3 on the cluster you can use a module that has it as the default.
-
+In BASH on the command line you will do
 ```bash
-$ module load miniconda3
+module load miniconda3
+conda activate GEN220 # use an existing gen220 environment
+```
+Do this one time  (make sure you did the step above to activate the environment)
+```
+python3 -m ipykernel install --user --name GEN220 --display-name "Python (GEN220)"
 ```
 
 This will load an environment where python3 is the python installed.
@@ -15,16 +20,20 @@ You can check that this works by doing `python -V` and see the version is 3.XX
 
 This will allow you to install python packages as well as any other pkgs you might want to.
 
-Do this one-time
+Make your own.
 ```bash
  mkdir ~/bigdata/.conda
  ln -s ~/bigdata/.conda ~/.conda
- conda create -y -n gen220 python=3
- source activate gen220
+ conda create -y -n mygen220 python=3 mamba
+ source activate mygen220
  conda config --add channels defaults
  conda config --add channels bioconda
  conda config --add channels conda-forge
- conda install biopython bcbio-gff
+ mamba install biopython bcbio-gff
+
+ mamba install ipykernel
+ python3 -m ipykernel install --user --name gen220 --display-name "Python (GEN220)"
+# Installed kernelspec gen220 in /rhome/USER/.local/share/jupyter/kernels/gen220
 ```
 
 ## Python Libraries
@@ -350,22 +359,27 @@ if not os.path.exists(in_file):
     os.system("curl -O "+gffurl)
 
 from BCBio import GFF
-limit_info = dict(
-        gff_id = ["BK006934"],
-        gff_type = ["CDS"],
+filter_options = dict(
+        gff_id = ["BK006934"], # this specifies the names of the chromosome/contigs you want to include
+        gff_type = ["CDS"], # this limits the type of features to include
         gff_source = ["EuPathDB"])
 
+# this option uses the limit_info value
+# filter_options is a dictionary that specifies the subset of features to print out
 in_handle = open(in_file)
-for rec in GFF.parse(in_handle, limit_info=limit_info):
+for rec in GFF.parse(in_handle, limit_info=filter_options):
     for feat in rec.features:
+      # this prints out the feature object
+      # this prints out a default options which provides some default printing
         print(feat)
-        break
+        break  # this stops after the first feature, just printing out
 in_handle.close()
 
 in_handle = open(in_file)
+# this is same as above but doesn't use the filter
 for rec in GFF.parse(in_handle):
     for feat in rec.features:
         print(feat)
-        break
+        break # this stops after the first feature, just printing out
 in_handle.close()
 ```
