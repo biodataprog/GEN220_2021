@@ -27,7 +27,7 @@ mkdir BLAST_demo
 cd BLAST_demo      
 ln -s /bigdata/gen220/shared/data/C_glabrata_ORFs.* .
 ln -s /bigdata/gen220/shared/data/S_cerevisiae_ORFs.* .
-ln -s /bigdata/gen220/shared/data/Yeast_chr2_ORFs.fa 
+ln -s /bigdata/gen220/shared/data/Yeast_chr2_ORFs.fa
 ```
 Now we have some files, set them up for running BLAST. Our
 question is, what ORFs are similar at the DNA level between
@@ -176,7 +176,7 @@ $ squeue -u $USER # check on your submitted job
 ```
 ## Other types of search tools
 
-* __HMMER__ 
+* __HMMER__
  * Identify conserved domains in a protein
  * Sensitive searches for distant homologs
  * phmmer can be of comparable speed to BLASTP
@@ -523,4 +523,7 @@ samtools fqidx READFILE.fq.gz ERR1309286.4
 
 ## Databases
 
-Lots of the data are in prim
+Lots of the data are already installed on the system.
+```bash
+module load db-blast
+# will 
