@@ -53,6 +53,6 @@ Pfam2GO - [http://current.geneontology.org/ontology/external2go/pfam2go](http://
 
 # Workshop
 
-1. Searching for Pfam domains in sets of proteins - [https://github.com/biodataprog/GEN220_2019_examples/tree/master/Bioinformatics_4](Bioinformatics_4)
+1. Searching for Pfam domains in sets of proteins - [Bioinformatics_4](https://github.com/biodataprog/GEN220_2019_examples/tree/master/Bioinformatics_4)
 See [search_SOD1.sh](https://github.com/biodataprog/GEN220_2019_examples/blob/master/Bioinformatics_4/search_SOD1.sh)
 2. Parsing report files
