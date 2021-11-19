@@ -4,6 +4,7 @@ Predicting function of proteins.
 
 * [Pfam site docs](https://pfam-docs.readthedocs.io/en/latest/summary.html)
 * [Pfam manual](http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf)
+
 # Finding homologs
 
 For Protein to Protein searches
@@ -25,7 +26,7 @@ See the HMMER [tutorial](http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf)
 
 Searching with [Interpro](https://www.ebi.ac.uk/interpro/search/)
 
-## Searchin Intepro on HPCC
+## Searchin Interpro on HPCC
 
 Note this can be slow.
 
