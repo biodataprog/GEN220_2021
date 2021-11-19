@@ -1,5 +1,9 @@
 # Annotating Proteins
 
+Predicting function of proteins.
+
+* [Pfam site docs](https://pfam-docs.readthedocs.io/en/latest/summary.html)
+* [Pfam manual](http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf)
 # Finding homologs
 
 For Protein to Protein searches
@@ -44,7 +48,6 @@ module load db-pfam
 hmmscan --domtbl domtbl_results.out $PFAM_DB/Pfam-A.hmm proteins.fa > proteins.hmmscan
 hmmsearch --domtbl domtbl_results.out $HMM protein-db.fa > protein.hmmsearch
 ```
-
 
 Pfam2GO - [http://current.geneontology.org/ontology/external2go/pfam2go](http://current.geneontology.org/ontology/external2go/pfam2go)
 
