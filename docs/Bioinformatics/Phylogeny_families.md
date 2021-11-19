@@ -8,7 +8,7 @@ I discussed phylogenetic tree building.
 git clone https://github.com/biodataprog/GEN220_2021_examples.git
 cd GEN220_2021_examples/Trees
 module load muscle
-module load fastree
+module load fasttree
 module load hmmer/3
 module load IQ-TREE/2.1.1
 module load trimal
