@@ -17,6 +17,8 @@ Many different browser environments
 Setting up your own - JBrowse - Genome Browser
 =====
 
+See https://jbrowse.org/jb2/docs/combined/
+
 (some of this was first written by: Tania Kurbessoian [@tania-k](https://github.com/tania-k) )
 
 To visualize genome annotation combined with Epigenomic, Transcriptomic, or Variant data you you want to visualize them onto a genome browser.  [JBrowse](https://jbrowse.org) provides an easy to setup tool for this visuzalition.
