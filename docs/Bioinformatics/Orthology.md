@@ -89,12 +89,12 @@ done
 
 cd ..
 
-orthofinder.py -a $CPU -f cyanobacteria
+orthofinder -a $CPU -f cyanobacteria
 ```
 
 # Ortholog results
 
-The output file by default will be the date of the anlaysis. Opening the file `cyanobacteria/Results_XXX/Orthogroups.txt` but I made a [folder](https://github.com/biodataprog/GEN220_2021_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/) in the examples you look over. Here's one [table](https://github.com/biodataprog/GEN220_2021_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/Orthogroups.tsv)
+The output file by default will be the date of the anlaysis. Opening the file `cyanobacteria/Results_XXX/Orthogroups.txt` but I made a [folder](https://github.com/biodataprog/GEN220_2020_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/) in the examples you look over. Here's one [table](https://github.com/biodataprog/GEN220_2020_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/Orthogroups.tsv)
 
 ## Format
 
@@ -126,12 +126,12 @@ OG0000007	AFZ53704, AFZ54461, AFZ54462	ACC79786, ACC80242, ACC80282, ACC80538, A
 2, EKQ68369, EKQ70142, EKQ70145, EKQ71300
 ```
 
-The tool also generates [summary statistics](https://github.com/biodataprog/GEN220_2021_examples/tree/main/Orthologs/cyanobacteria/OrthoFinder/Results/Comparative_Genomics_Statistics) we can look through.
+The tool also generates [summary statistics](https://github.com/biodataprog/GEN220_2020_examples/tree/main/Orthologs/cyanobacteria/OrthoFinder/Results/Comparative_Genomics_Statistics) we can look through.
 
-Could write a script to turn this into a table or use the [summary count table](https://github.com/biodataprog/GEN220_2021_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/Orthogroups.GeneCount.tsv) provided.
+Could write a script to turn this into a table or use the [summary count table](https://github.com/biodataprog/GEN220_2020_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/Orthogroups.GeneCount.tsv) provided.
 
 ```text
 ORTHOLOG_GRP	SP1   SP2    SP3
-ORTHO_0001         10     5
-ORTHO_0002          1     1
+ORTHO_0001         10     5   0
+ORTHO_0002          1     1   0
 ```
