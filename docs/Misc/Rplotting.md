@@ -1,5 +1,9 @@
 # Plotting and Data viz with R
 
+# Data visualization
+
+good guide includes Claus Wilke's [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/index.html) and [associated code](https://github.com/clauswilke/dataviz)
+
 # Reading in data
 
 ```R
@@ -8,21 +12,20 @@ library(tidyverse)
 
 tblr <- read.csv("data.csv",sep=",")
 
+hist(tblr$V1)
+
 ```
 
 # tidyverse
 
-## Filter data
+Data framework in R called [tidyverse](https://www.tidyverse.org/).
 
-## Add a new column with mutate
+In particular visualizing data with [ggplot](https://ggplot2.tidyverse.org/)
 
-```R
-NewTbl <- tblr %>% mutate(BinKb = Start / 1000)
+# data loading
 
-head(NewTbl)
-```
-## Histogram
+Using [readr](https://readr.tidyverse.org/)
 
-## Heatmap
+# data filtering
 
-## Treeview
+Using [dplyr](https://dplyr.tidyverse.org/)
